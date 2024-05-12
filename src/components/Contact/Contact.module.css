@@ -1,0 +1,39 @@
+.container {
+    width: 250px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text {
+    margin: 0;
+    font-size: 18px;
+     
+}
+.btnDelete {
+    padding: 8px 15px;
+    margin: 0;
+    border: none;
+    border-radius: 5px;
+    background: #FF7F08;
+    color: #fafafa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+     
+}
+.btnDelete:hover,
+.btnDelete:focus {
+    background: #f9f000;
+    color: #070707;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+    height: 14px;
+    margin-right: 5px;
+    color: orange;
+}
