@@ -29,7 +29,6 @@ const contactSlice = createSlice({
       })
       .addCase(addContact.pending, (state) => {
         state.loading = true;
-        // state.error = null;
       })
       .addCase(addContact.fulfilled, (state, action) => {
         state.loading = false;
@@ -41,7 +40,6 @@ const contactSlice = createSlice({
       })
       .addCase(deleteContact.pending, (state) => {
         state.loading = true;
-        // state.error = null;
       })
       .addCase(deleteContact.fulfilled, (state, action) => {
         state.loading = false;
@@ -65,7 +63,7 @@ export const selectError = state => state.contacts.error;
 export const selectFilteredContacts = createSelector(
   [selectContact, selectNameFilter],
   (contacts, nameFilter) => {
-    console.log("selectFilteredContacts");
+    // console.log("selectFilteredContacts");
     return contacts.filter(contact =>
       contact.name.toLowerCase().includes(nameFilter.toLowerCase())
     );

@@ -1,17 +1,20 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { FcReadingEbook } from 'react-icons/fc';
+
 import ContactForm from '../ContactForm/ContactForm';
 import SearchBox from '../SearchBox/SearchBox';
 import ContactList from '../ContactList/ContactList';
 import Message from '../Message/Message';
 import Loader from '../Loader/Loader'; 
-import css from './App.module.css';
+
 import { fetchContacts } from "../../redux/contactsOps";
+import { selectContact } from "../../redux/contactsSlice";
+import css from './App.module.css';
 
 function App() {
  const dispatch = useDispatch();
- const contactsItems = useSelector(state => state.contacts.items);
+ const contactsItems = useSelector(selectContact);
  const isLoading = useSelector(state => state.contacts.loading);
  const error = useSelector(state => state.contacts.error);
 
